@@ -4,8 +4,6 @@
 #include <string>
 #include <ctime>
 
-using namespace std;
-
     // macros
 
     #define seconds_from_epoch time_t
@@ -15,7 +13,7 @@ using namespace std;
     
     // Function prototypes
 
-    string log_formatter(string input);
+    std::string log_formatter(std::string input);
 
     // Function prototypes
 

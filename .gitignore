@@ -1,2 +1,3 @@
-Build
-Executables
+bin/
+build/
+Executables/

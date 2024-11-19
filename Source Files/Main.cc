@@ -1,15 +1,15 @@
 #include <cca.h>
 
+
 int main()
 {
 
-    if(create_directory("Code_Workspace/")) {
+    std::string base_dir = std::filesystem::path("Playground").string();
+    std::cout << std::filesystem::absolute(base_dir) << std::endl;
+    std::cout << std::filesystem::current_path() << std::endl;
 
-        if(create_directory("Code_Workspace/Logs/")) {
-
-            write_file("Code_Workspace/Logs/logs.txt", log_formatter("Hello World!"));
-
-        }
+    if(create_dir({std::filesystem::absolute(base_dir)})) {
+        
     }
 
     return 0;

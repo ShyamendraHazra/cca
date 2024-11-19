@@ -1,11 +1,9 @@
-#include <format_logs.h>
-
-using namespace std;
+#include <Logs/format_logs.h>
 
 
-string log_formatter(string input) {
+std::string log_formatter(std::string input) {
 
-    string output;
+    std::string output;
 
     seconds_from_epoch rawtime;
     time(&rawtime);
@@ -13,7 +11,7 @@ string log_formatter(string input) {
     char current_day_time_array[22]; 
     strftime(current_day_time_array,22,"%d-%m-%Y %H::%M::%S", timeinfo);
 
-    string current_day_time_string(current_day_time_array);
+    std::string current_day_time_string(current_day_time_array);
 
     output.append(current_day_time_string);
     output.append(" [MESSAGE] ");
